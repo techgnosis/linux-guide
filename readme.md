@@ -1,8 +1,8 @@
 These are notes collected while running Arch and Void.
 
 # Install
-Both Arch and Void have very similar install procedures. Void can use musl for it's C library which makes the install process shorter than when using glibc.
-[Install](install.md)
+Both Arch and Void have very similar [install](install.md) procedures. Void can use musl for it's C library which makes the install process shorter than when using glibc.
+
 
 # Package managers
 You need to use the package manager in order to do the installs  
@@ -16,8 +16,7 @@ See the [UEFI notes](uefi.md)
 First thing to do is give your user [sudo](sudo.md) access
 
 # Network
-Once booted, you need to get on the internet  
-[Network](network.md)
+Once booted, you need to get on the [network](network.md)
 
 # runit
 If you are using Void, it uses the [runit](runit.md) init system and service manager
