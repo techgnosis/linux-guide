@@ -1,4 +1,4 @@
-These are notes collected while running Arch and Void.
+These are notes I collected while running Arch and Void on my desktop. These notes are for me and they are not particulaly presentable.
 
 # Install
 Both Arch and Void have very similar [install](install.md) procedures. Void can use musl for it's C library which makes the install process shorter than when using glibc.
