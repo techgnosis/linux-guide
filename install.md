@@ -10,3 +10,5 @@ but you should do
 * `intel-ucode` provides microcode updates for when you are configuring your kernel boot flags
 * `efibootmgr`
 
+Install them during the `pacstrap` step because you are already on the internet
+

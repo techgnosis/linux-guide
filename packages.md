@@ -5,6 +5,7 @@ xorg-xwayland
 
 pipewire
 pipewire-audio
+pipewire-pulse
 
 which
 sudo

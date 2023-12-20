@@ -1,9 +1,8 @@
 My machine just has a single NIC which is attached to a gateway with a DHCP server
 
-I would ideally like to just run a single command to get my NIC an IP address from the server
+It's easy to ignore a network manager and configure the network yourself
 
-Or, I could just assign myself an IP manually? Why do I need to get an IP from the DHCP server? I know the subnet and I'm the only other device on it.
-
+The command format is:
 ip address add 192.168.1.200/24 broadcast *broadcast_address* dev *device*
 
 The + argument to `broadcast` automatically determines broadcast address from the IP and subnet mask
