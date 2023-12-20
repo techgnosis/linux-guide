@@ -10,7 +10,7 @@ You need to use the package manager in order to do the installs
 [xbps](xbps.md)
 
 # Booting
-See the [UEFI notes](uefi.md)
+Boot from [UEFI Boot Manager](uefi.md) instead of a traditional boot loader like GRUB
 
 # sudo
 First thing to do is give your user [sudo](sudo.md) access
