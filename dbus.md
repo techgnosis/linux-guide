@@ -1,6 +1,6 @@
 you can run dbus yourself
 
-dbus-daemon is the executable
+`dbus-daemon` is the executable
 
 you have to set DBUS_SESSION_BUS_ADDRESS afterwards or programs that need dbus won't know where to find it
 
@@ -8,7 +8,7 @@ correct flags are
 
 `dbus-daemon --session --fork --print-address 1`
 
-that will print the address of the bus (some kind of socket)
+that will print the address of the bus (its a unix socket)
 
 so its easiest to do
 
@@ -19,9 +19,9 @@ If you export variables from a bash script, you can capture them by running `sou
 You can put a file with `export` statements into `/etc/profile.d/` and it will get picked up for every login. This is a good way to share `DBUS_SESSION_BUS_ADDRESS` across logins.
 
 
-I don't seem to need a system bus to run sway.
+I don't seem to need a system bus to run sway or pipewire
 
-dbus has "service" files in its config. those files tell dbus how to start other services automatically. that is probably how pipewire and wireplumber and all the portal stuff gets started when i run steam
+dbus has "service" files in its config. those files tell dbus how to start other services automatically. that is how pipewire and wireplumber and all the portal stuff gets started when i run steam
 
 there is a lot of policy defined for the system bus that dictates what bus apps are allowed to do. session bus usually does not have any policy
 
