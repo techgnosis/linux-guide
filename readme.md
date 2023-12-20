@@ -22,10 +22,10 @@ Once booted, you need to get on the [network](network.md)
 If you are using Void, it uses the [runit](runit.md) init system and service manager
 
 # Daemons
-Learn how to [daemonize](daemon.md) most anything
+Learn how to [daemonize](daemon.md) your user services
 
 # D-Bus
-[D-Bus](dbus.md) seems like a core part of desktop Linux that can't be avoided, so learn to appreciate how lean it actually is
+[D-Bus](dbus.md) is core part of even the leanest desktop Linux
 
 # Pipewire
 Once you have D-Bus, you can have some sound with [pipewire](pipewire.md)
