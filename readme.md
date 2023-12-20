@@ -36,3 +36,5 @@ Once you have D-Bus, you can have some sound with [pipewire](pipewire.md)
 # sway
 Now that you have seat management, you can run [sway](sway.md) as your desktop environment
 
+# Hotkeys
+Now that you are in sway, it would be good to study your [hotkeys](hotkeys.md)
