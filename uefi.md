@@ -11,7 +11,7 @@ https://wiki.archlinux.org/title/EFISTUB
 efibootmgr \
 --create \
 --disk /dev/disk/by-id/xxx \
---part 2 \
+--part 1 \
 --label "Arch" \
 --loader vmlinuz \
 --unicode ' root=/dev/sda3 initrd=\efi\boot\initramfs.img'

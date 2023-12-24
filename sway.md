@@ -8,6 +8,10 @@ sway uses `foot` as the terminal editor. make a config file at `~/.config/foot/f
 
 sway process is a child of the bash process, but swaybar and swaybg appear to fork
 
+Config
+---
+Copy `/etc/sway/config` to `~/.config/sway/config`. At the end of that file add `include ~/.config/sway/config.d/*`. Then you can drop snippets in there. 
+
 
 Void
 ---
