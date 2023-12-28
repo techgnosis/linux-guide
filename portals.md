@@ -10,6 +10,7 @@ Portals are here to stay, so learn to love them.
 http://who-t.blogspot.com/2021/08/flatpak-portals-how-do-they-work.html
 https://www.bassi.io/articles/2023/05/29/configuring-portals/
 https://flatpak.github.io/xdg-desktop-portal/docs/portals.conf.html
+https://whynothugo.nl/journal/2023/06/20/understanding-the-xdg-access-portal/
 
 
 If you want to write your own backend, you should be able to do it with any language that you can communicate with D-Bus with. Python has a D-Bus API that might make that easy to do.
