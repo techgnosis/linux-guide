@@ -1,5 +1,7 @@
 These are notes I collected while running Arch and Void on my desktop. These notes are for me and they are not particulaly presentable.
 
+Flatpak is by far the best way to run serious applications in any distribution, so this guide will focus on building a system that focuses on Flatpak.
+
 # Install
 Both Arch and Void have very similar [install](install.md) procedures. Void can use musl for it's C library which makes the install process shorter than when using glibc.
 

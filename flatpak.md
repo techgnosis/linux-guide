@@ -13,3 +13,5 @@ flatpak run
 flatpak uninstall
 
 flatpak uninstall --unused
+
+Need to install `xdg-user-dirs`. Some Flatpak apps rely on the files it creates to find directories like $HOME/Videos
