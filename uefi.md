@@ -14,11 +14,12 @@ efibootmgr \
 --part 1 \
 --label "Arch" \
 --loader vmlinuz \
---unicode ' root=/dev/sda3 initrd=\efi\boot\initramfs.img'
+--unicode ' root=/dev/sda3 initrd=\path-to-initramfs-img'
 ```
 
 * There MUST be a space in front of the --unicode string
 * Do NOT set `root=` to a traditional alphanumeric ID like `/dev/sda2` as those can change and you might boot into the wrong OS
+* Some UEFIs MUST have a `\` in front of the initrd path
 
 `efibootmgr -b 000x -B`
 
