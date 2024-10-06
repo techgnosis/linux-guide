@@ -1,10 +1,8 @@
 pacman
 ###########
 base 3-2
-cosmic-files 1.0.0.alpha.2-1
 cosmic-session 1.0.0.alpha.2-1
 cosmic-terminal 1.0.0.alpha.2-1
-cosmic-text-editor 1.0.0.alpha.2-1
 cosmic-wallpapers 1:1.0.0alpha2-1
 efibootmgr 18-3
 intel-ucode 20240910-1
@@ -17,14 +15,16 @@ vulkan-radeon 1:24.2.3-1
 xdg-desktop-portal-cosmic 1.0.0.alpha.2-1
 
 
-15
+13
 
 
 nix
 ###########
 firefox-131.0
 git-2.46.0
+lapce-0.4.2
 magic-wormhole-0.15.0
 nix-2.25.0pre20240920_ca3fc169
 openssh-9.8p1
+vscode-1.94.0
 which-2.21
