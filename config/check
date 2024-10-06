@@ -17,6 +17,8 @@ echo "nix" >> $CORE_FILE
 echo "###########" >> $CORE_FILE
 nix-env --query >> $CORE_FILE
 cat $CORE_FILE
+echo ""
+echo ""
 cd $LINUX_GUIDE
 git status
-git diff core
+git diff
