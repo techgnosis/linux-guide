@@ -2,7 +2,9 @@
 
 set -euo pipefail
 
-pacman -Q | tail
+pacman -Qe | tail
+echo "\n\n"
+pacman -Qe | wc -l
 echo "\n\n"
 cat /var/log/pacman.log | wc -l
 echo "\n\n"
