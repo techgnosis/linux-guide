@@ -2,14 +2,16 @@
 
 set -euo pipefail
 
-echo "pacman" > core
-echo "###########" >> core
-pacman -Qe >> core
-echo "" >> core
-echo "" >> core
-pacman -Qe | wc -l >> core
-echo "" >> core
-echo "" >> core
-echo "nix" >> core
-echo "###########" >> core
-nix-env --query >> core
+CORE_FILE=~/code/linux-guide/core
+
+echo "pacman" > $CORE_FILE
+echo "###########" >> $CORE_FILE
+pacman -Qe >> $CORE_FILE
+echo "" >> $CORE_FILE
+echo "" >> $CORE_FILE
+pacman -Qe | wc -l >> $CORE_FILE
+echo "" >> $CORE_FILE
+echo "" >> $CORE_FILE
+echo "nix" >> $CORE_FILE
+echo "###########" >> $CORE_FILE
+nix-env --query >> $CORE_FILE
