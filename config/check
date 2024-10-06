@@ -10,25 +10,21 @@ echo "###########" >> $CORE_FILE
 pacman -Qe >> $CORE_FILE
 echo "" >> $CORE_FILE
 echo "" >> $CORE_FILE
-pacman -Qe | wc -l >> $CORE_FILE
-echo "" >> $CORE_FILE
-echo "" >> $CORE_FILE
+
 
 echo "flatpak" >> $CORE_FILE
 echo "###########" >> $CORE_FILE
 flatpak list --app >> $CORE_FILE
 echo "" >> $CORE_FILE
 echo "" >> $CORE_FILE
-flatpak list --app | wc -l >> $CORE_FILE
-echo "" >> $CORE_FILE
-echo "" >> $CORE_FILE
+
 
 echo "nix" >> $CORE_FILE
 echo "###########" >> $CORE_FILE
 nix-env --query >> $CORE_FILE
+echo "" >> $CORE_FILE
+echo "" >> $CORE_FILE
 cat $CORE_FILE
-echo ""
-echo ""
 cd $LINUX_GUIDE
 git status --short
 git diff
