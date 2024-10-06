@@ -5,6 +5,7 @@ cosmic-session 1.0.0.alpha.2-1
 cosmic-terminal 1.0.0.alpha.2-1
 cosmic-wallpapers 1:1.0.0alpha2-1
 efibootmgr 18-3
+flatpak 1:1.15.10-1
 intel-ucode 20240910-1
 linux 6.11.1.arch1-1
 linux-firmware 20240909.552ed9b8-1
@@ -15,7 +16,16 @@ vulkan-radeon 1:24.2.3-1
 xdg-desktop-portal-cosmic 1.0.0.alpha.2-1
 
 
-13
+14
+
+
+flatpak
+###########
+Lapce	dev.lapce.lapce	0.4.0	stable	user
+Firefox	org.mozilla.firefox	131.0	stable	user
+
+
+2
 
 
 nix
@@ -24,5 +34,4 @@ git-2.46.0
 magic-wormhole-0.15.0
 nix-2.25.0pre20240920_ca3fc169
 openssh-9.8p1
-vscode-1.94.0
 which-2.21
