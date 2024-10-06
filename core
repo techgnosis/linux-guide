@@ -20,9 +20,7 @@ xdg-desktop-portal-cosmic 1.0.0.alpha.2-1
 
 nix
 ###########
-firefox-131.0
 git-2.46.0
-lapce-0.4.2
 magic-wormhole-0.15.0
 nix-2.25.0pre20240920_ca3fc169
 openssh-9.8p1
