@@ -21,11 +21,12 @@ xdg-desktop-portal-cosmic 1.0.0.alpha.2-1
 
 flatpak
 ###########
-Lapce	dev.lapce.lapce	0.4.0	stable	user
+Flatseal	com.github.tchx84.Flatseal	2.3.0	stable	user
+VSCodium	com.vscodium.codium	1.93.1.24256	stable	user
 Firefox	org.mozilla.firefox	131.0	stable	user
 
 
-2
+3
 
 
 nix
