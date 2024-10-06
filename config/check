@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-CORE_FILE=~/code/linux-guide/core
+LINUX_GUIDE=~/code/linux-guide
+CORE_FILE=$LINUX_GUIDE/core
 
 echo "pacman" > $CORE_FILE
 echo "###########" >> $CORE_FILE
@@ -15,3 +16,7 @@ echo "" >> $CORE_FILE
 echo "nix" >> $CORE_FILE
 echo "###########" >> $CORE_FILE
 nix-env --query >> $CORE_FILE
+cat $CORE_FILE
+cd $LINUX_GUIDE
+git status
+git diff core
