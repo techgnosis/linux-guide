@@ -1,0 +1,22 @@
+pacman
+###########
+base 3-2
+efibootmgr 18-3
+intel-ucode 20240910-1
+linux 6.11.1.arch1-1
+linux-firmware 20240909.552ed9b8-1
+man-db 2.13.0-1
+micro 2.0.14-1
+sudo 1.9.16-1
+
+
+8
+
+
+nix
+###########
+git-2.46.0
+magic-wormhole-0.15.0
+nix-2.25.0pre20240920_ca3fc169
+openssh-9.8p1
+which-2.21

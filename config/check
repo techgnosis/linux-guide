@@ -2,10 +2,14 @@
 
 set -euo pipefail
 
-pacman -Qe
-echo ""
-echo ""
-pacman -Qe | wc -l
-echo ""
-echo ""
-nix-env --query
+echo "pacman" > core
+echo "###########" >> core
+pacman -Qe >> core
+echo "" >> core
+echo "" >> core
+pacman -Qe | wc -l >> core
+echo "" >> core
+echo "" >> core
+echo "nix" >> core
+echo "###########" >> core
+nix-env --query >> core
