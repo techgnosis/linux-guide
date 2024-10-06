@@ -2,10 +2,10 @@
 
 set -euo pipefail
 
-pacman -Qe | tail
-echo "\n\n"
+pacman -Qe
+echo ""
+echo ""
 pacman -Qe | wc -l
-echo "\n\n"
-cat /var/log/pacman.log | wc -l
-echo "\n\n"
+echo ""
+echo ""
 nix-env --query
