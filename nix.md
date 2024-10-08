@@ -27,3 +27,5 @@ Generation is created called `bob-generation-11`
 Bob->11
 Sally->8
 
+
+nixos-rebuild calls nixos-build which calls nixos-instantiate and nix-store --realise. nixos-instantiate provides inputs to the nix expressions and outputs a derivation which is a human readable text file meant to be consumed by nix-store --realise and produce outputs
