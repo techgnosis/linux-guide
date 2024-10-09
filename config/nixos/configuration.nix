@@ -24,13 +24,16 @@
 
   environment.systemPackages = with pkgs; [
     micro
+    tree
     git
     vulkan-tools
-    vscodium
     firefox
+    podman
     hyprland
+    xdg-desktop-portal-hyprland
     kitty
     fuzzel
+    vscodium
   ];
 
   fonts.packages = with pkgs; [
@@ -41,6 +44,7 @@
   #services.xserver.desktopManager.xfce.enable = true;
   #services.xserver.displayManager.lightdm.enable = true;
   programs.hyprland.enable = true;
+  programs.hyprland.xwayland.enable = false;
 
   # DO NOT CHANGE UNDER ANY CIRCUMSTANCE
   system.stateVersion = "24.05"; # Did you read the comment?
