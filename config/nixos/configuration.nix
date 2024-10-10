@@ -31,10 +31,8 @@
     vulkan-tools
     firefox
     podman
-    hyprland
-    xdg-desktop-portal-hyprland
-    kitty
-    fuzzel
+    alacritty
+    bemenu
     vscodium
   ];
 
@@ -42,11 +40,7 @@
     (nerdfonts.override { fonts = [ "DroidSansMono" ]; })
   ];
 
-  #services.xserver.enable = true;
-  #services.xserver.desktopManager.xfce.enable = true;
-  #services.xserver.displayManager.lightdm.enable = true;
-  programs.hyprland.enable = true;
-  programs.hyprland.xwayland.enable = false;
+  programs.labwc.enable = true;
 
   # DO NOT CHANGE UNDER ANY CIRCUMSTANCE
   system.stateVersion = "24.05"; # Did you read the comment?
