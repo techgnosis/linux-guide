@@ -19,6 +19,7 @@
     cosmic-notifications
     cosmic-settings-daemon
     cosmic-workspaces-epoch
+    cosmic-greeter
     xdg-desktop-portal-cosmic
   ];
 
