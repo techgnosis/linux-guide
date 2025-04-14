@@ -1,0 +1,1 @@
+You can put .nspawn files next to the container file tree directories

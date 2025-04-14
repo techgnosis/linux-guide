@@ -1,0 +1,27 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+pacstrap -K -c \
+cosmic-app-library \
+cosmic-applets \
+cosmic-bg \
+cosmic-comp \
+cosmic-files \
+cosmic-icon-theme \
+cosmic-idle \
+cosmic-launcher \
+cosmic-notifications \
+cosmic-osd \
+cosmic-panel \
+cosmic-player \
+cosmic-randr \
+cosmic-screenshot \
+cosmic-session \
+cosmic-settings \
+cosmic-settings-daemon \
+cosmic-terminal \
+cosmic-text-editor \
+cosmic-wallpapers \
+cosmic-workspaces \
+xdg-desktop-portal-cosmic

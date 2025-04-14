@@ -1,9 +1,13 @@
 # jamesOS
 
-Just a really slim DE with a good desktop portal. Lean into Flatpak
-Hard Goal - not have GTK or QT installed. Only iced. Super lean. 
+Barebones nspawn environment. Only what is neeed to launch OS containers. A new era!
+https://wiki.archlinux.org/title/Systemd-nspawn
+`pacstrap -K /mnt base linux linux-firmware micro intel-ucode efibootmgr sudo`
 
 
+Flatpak to be used at user level. Home is a dedicated disk.
+
+Primary container:
 Wayland only, COSMIC
 NO xwayland
 Pipewire w/ pulse
@@ -18,33 +22,10 @@ Copper Wire - Flatpak
 
 
 
-cosmic-app-library
-cosmic-applets
-cosmic-bg
-cosmic-comp
-cosmic-files
-cosmic-icon-theme
-cosmic-idle
-cosmic-launcher
-cosmic-notifications
-cosmic-osd
-cosmic-panel
-cosmic-player
-cosmic-randr
-cosmic-screenshot
-cosmic-session
-cosmic-settings
-cosmic-settings-daemon
-cosmic-terminal
-cosmic-text-editor
-cosmic-wallpapers
-cosmic-workspaces
-xdg-desktop-portal-cosmic
-
-At some point I can convert this idea an OS with mkosi. It supports Arch
-
-
-2x 1TB drives
-1x 256GB drive
+1x 1TB drives
 Mount 256 as /home
-Use nspawn to control 
+
+
+Have a dedicated script that clears out a specific directory and installs a new file tree into it
+
+TASK - pacstrap containers need DHCP

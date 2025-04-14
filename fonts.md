@@ -6,6 +6,7 @@ its all managed by fontconfig and freetype2
 
 Arch - `gnu-free-fonts` populates that directory
 all of the fonts from gnu-free-fonts have the .otf extension which makes them "OpenType" which is built on "TrueType"
+`ttf-liberation`
 
 Void - `freefont-ttf`
 all of the fonts from `freefont-ttf` are .ttf which I guess makes them "TrueType"
