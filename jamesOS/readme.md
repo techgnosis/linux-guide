@@ -16,3 +16,5 @@ if i do tty0 and tty7, i will get a file not found
 if i do tty0 and tty2
 if i do tty0 and tty1 then it uses tty1 and it borks my system. this tells me that it tries to use tty1 because tty1 is in use and it borks my machine
 if i drop tty0 i get an error specific to tty0
+
+try CAP_SYS_ADMIN
