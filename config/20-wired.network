@@ -1,0 +1,8 @@
+[Match]
+Name=enp0s31f6
+
+[Link]
+RequiredForOnline=routable
+
+[Network]
+DHCP=yes
