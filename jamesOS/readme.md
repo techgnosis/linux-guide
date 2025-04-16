@@ -1,15 +1,15 @@
-# jamesOS
+# containerOS
 
-Barebones nspawn environment. Only what is neeed to launch OS containers. A new era!
+Barebones nspawn environment. Only what is neeed to launch OS containers.
 https://wiki.archlinux.org/title/Systemd-nspawn
+
+* file trees on disk as OS image
+* ostree to track changes
+* systemd-nspawn to run a system container
 
 
 
 it's the TTYs I think
-do not bind /dev/shm. its a shared memory filesystem and your container can have its own.
-experiment with `ostree init` before the pacstrap
-
-
 theory -
 i may need to do something with ttys and not having so many agettys
 if i do tty0 and tty7, i will get a file not found

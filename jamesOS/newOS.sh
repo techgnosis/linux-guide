@@ -21,3 +21,5 @@ sudo \
 git \
 less \
 which
+
+sudo cp os.nspawn /etc/systemd/nspawn/$NAME.nspawn
