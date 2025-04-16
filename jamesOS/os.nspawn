@@ -1,0 +1,7 @@
+[Exec]
+Boot=true
+Capability=CAP_SYS_TTY_CONFIG
+
+[Files]
+Bind=/dev/dri/card1
+Bind=/dev/dri/renderD128
