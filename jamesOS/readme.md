@@ -8,6 +8,7 @@ https://wiki.archlinux.org/title/Systemd-nspawn
 * systemd-nspawn to run a system container
 
 
+IDEAS -
 
 it's the TTYs I think
 theory -
@@ -17,4 +18,7 @@ if i do tty0 and tty2
 if i do tty0 and tty1 then it uses tty1 and it borks my system. this tells me that it tries to use tty1 because tty1 is in use and it borks my machine
 if i drop tty0 i get an error specific to tty0
 
-try CAP_SYS_ADMIN
+try logging in on tty2 and then stopping agetty on tty1
+
+BREAKTHROUGH -
+I set SEATD_VTBOUND=0 on seatd and the logs stop complaining about ttys now. Now it's just card1 that doesn't work. I can focus on that for a while.

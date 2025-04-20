@@ -8,3 +8,5 @@ You still need to Bind your device nodes.
 
 do not bind /dev/shm. its a shared memory filesystem and your container can have its own.
 
+i dont think i need to pass a /dev/pts either
+
