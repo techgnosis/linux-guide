@@ -9,8 +9,9 @@ mkinitcpio \
 
 There's really only one section of mkinitcpio.conf and that is HOOKS. They are just named "modules" that run and build parts of the cpio archive. Things like "filesystems" and "udev".
 
-mkinitcpio --listhooks
-mkinitcpio --hookhelp hook
+`mkinitcpio --listhooks`
+
+`mkinitcpio --hookhelp hook`
 
 
 in Arch its a zstd compressed cpio archive
@@ -22,7 +23,7 @@ unzstd file.zst
 
 This generates a cpio archive that is the same size on disk as the one that Arch generated for me during install!
 
-cpio --extract --file file
+`cpio --extract --file file`
 that will unpack to current directory
 its a file system, as expected
 
