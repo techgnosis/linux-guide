@@ -9,4 +9,5 @@ linux-firmware \
 micro \
 intel-ucode \
 efibootmgr \
-sudo
+sudo \
+git
