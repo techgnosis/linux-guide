@@ -1,9 +1,11 @@
 Arch uses `mkinitcpio`
 
+```
 mkinitcpio \
 --config /etc/mkinitcpio.conf
 --kernel 6.6.2-arch1-1 \
 --generate path_to_new_img
+```
 
 There's really only one section of mkinitcpio.conf and that is HOOKS. They are just named "modules" that run and build parts of the cpio archive. Things like "filesystems" and "udev".
 
