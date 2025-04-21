@@ -4,3 +4,5 @@ Another system container engine is systemd-nspawn. It has a management tool (not
 
 machinectl -> systemd-machined -> systemd-nspawn
 incus -> incus -> lxc
+
+Incus is the best choice for desktop users. It has more user facing features and is distro agnostic.
