@@ -11,3 +11,5 @@ intel-ucode \
 efibootmgr \
 sudo \
 git
+
+cp -r /root/linux-guide /mnt/root/
