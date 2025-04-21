@@ -16,10 +16,11 @@ There's really only one section of mkinitcpio.conf and that is HOOKS. They are j
 
 in Arch its a zstd compressed cpio archive
 
-file starts off as .img
-file says its a zstd file
+file starts off as .img. running `file` says its a zstd file
+```
 mv file.img file.zst
 unzstd file.zst
+```
 
 This generates a cpio archive that is the same size on disk as the one that Arch generated for me during install!
 
