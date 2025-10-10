@@ -22,3 +22,22 @@ nat table has PREROUTING, INPUT, OUTPUT, and POSTROUTING chains
 Rules have targets. Targets are generally ACCEPT, DROP, or RETURN
 
 To see the rules correctly, do `iptables -L -n -v` (list, numeric, verbose)
+
+---------
+
+PREROUTING INPUT FORWARD OUTPUT 
+
+
+CenturyLink Router
+Public - 50.50.50.50
+Private - 192.168.0.1
+
+Laptop
+Private - 192.168.0.79
+
+Packet comes in
+DEST 50.50.50.50
+SNAT occurs in PREROUTING
+Did the destination IP remain 50.50.50.50? INPUT
+Did the destination IP become 192.168.0.1? INPUT
+Did the destination IP become 192.168.0.79? FORWARD
