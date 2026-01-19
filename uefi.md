@@ -14,7 +14,7 @@ efibootmgr \
 --part 1 \
 --label "Arch" \
 --loader vmlinuz-linux \
---unicode ' root=/dev/sda2 initrd=initramfs-linux.img initrd=intel-ucode.img'
+--unicode ' root=/dev/sda2 initrd=initramfs-linux.img initrd=intel-ucode.img loglevel=3'
 ```
 
 * There MUST be a space in front of the --unicode string
