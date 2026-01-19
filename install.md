@@ -9,6 +9,6 @@ but you should do
 * `micro` provides a text editor whne finishing the install
 * `intel-ucode` provides microcode updates for when you are configuring your kernel boot flags
 * `efibootmgr`
+* `sudo` so you can setup a new user with sudo priv before booting
 
 Install them during the `pacstrap` step because you are already on the internet
-

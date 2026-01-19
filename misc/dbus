@@ -1,8 +1,0 @@
-#! /bin/bash
-
-set -euo pipefail
-
-export DBUS_SESSION_BUS_ADDRESS=$(dbus-daemon --session --fork --print-address 1)
-
-echo "export DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS}" > dbus.sh
-sudo mv dbus.sh /etc/profile.d/
