@@ -19,6 +19,8 @@ pacman -Ss package_name
 # query installed package
 pacman -Qs package_name
 
+# query why a package was installed
+pacman -Qi package_name
 
 # list all explicitly installed packages
 pacman -Qe
