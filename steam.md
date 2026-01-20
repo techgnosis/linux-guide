@@ -1,4 +1,5 @@
-Sway + X-Wayland works perfectly.
+Steam requires xwayland\
+Steam works perfectly on niri + xwayland-satellite
 
 # Install
 `flatpak --user install flathub com.valvesoftware.Steam`
@@ -24,4 +25,3 @@ https://github.com/GloriousEggroll/proton-ge-custom
 https://wiki.archlinux.org/title/Steam
 https://www.reddit.com/r/linux_gaming/comments/sok9zw/how_to_use_fsr_on_any_steam_game_with_gamescope/
 https://github.com/ValveSoftware/gamescope
-
