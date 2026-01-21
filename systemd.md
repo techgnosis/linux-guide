@@ -9,6 +9,7 @@ systemd suite does a lot. what is it doing for me in my particular arch install?
 * creates nodes in /dev
 * session management including dbus and xdg_runtime_dir
 
+`systemctl --user` puts it in user mode
 
 `systemctl list-unit-files --no-pager`
 
