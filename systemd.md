@@ -12,7 +12,7 @@ systemd suite does a lot. what is it doing for me in my particular arch install?
 
 `systemctl list-unit-files --no-pager`
 
-`systemctl cat unit` # do not use "show", it is way too verbose. it shows all possible systemd parameters for the unit and that's a long list
+`systemctl cat` will print the unit file contents
 
 `systemctl mask` to permanently disable the unit
 
