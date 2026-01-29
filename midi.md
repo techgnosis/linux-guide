@@ -1,9 +1,29 @@
-`pacman -S alsa-utils`
+MIDI devices show up at /dev/snd/midi*
 
-that gave me `aconnect` which lets me see proof that my UM-ONE is picked up
+If you don't have a hardware device then you can create some virtual devices
 
-OK, pipewire does in fact handle MIDI devices
+modprobe snd-virmidi
 
-Use `pw-link --input` and `pw-link --output` to see inputs and outputs, and then you can link an output with an input
+This creates devices at /dev/snd/midi*
 
-`pw-link --links --id`
+# synth
+
+fluidsynth
+soundfont-fluid
+
+fluidsynth \
+--audio-driver pipewire \
+--midi-driver alsa_seq \
+--portname FLUID \
+--quiet \
+--server \
+--no-shell \
+/usr/share/soundfonts/FluidR3_GM.sf2
+
+fluidsynth is communicating with pipewire directly while receiving MIDI on an ALSA device called FLUID.
+
+# aconnect
+
+You can run `aconnect -l` to list out the input and output MIDI devices. 
+
+Then run, for example, `aconnect 24:0 128:0` to connect the virtual output to the FLUID input.
