@@ -1,1 +1,1 @@
-These are notes I collected while learning to appreciate Arch, Void, Flatpak, and Nix
+These are notes I collected while learning to appreciate Arch, Void, and Alpine

@@ -33,8 +33,8 @@ dbus-send - part of dbus
 dbus-monitor - part of dbus
 pacman -S dbus-python
 
-Some things that make dbus stand out
----------
+# dbus notes
+
 Single owner "bus names". 
 On-demand starting of services (service files), like starting pipewire automatically. This seems to be a big part of dbus. I'm curious how this holds up against a systemd world.
 bus activation seems like a useful feature for void linux since it does not use systemd

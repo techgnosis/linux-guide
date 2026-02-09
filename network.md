@@ -1,5 +1,3 @@
-My machine just has a single NIC which is attached to a gateway with a DHCP server
-
 It's easy to ignore a network manager and configure the network yourself
 
 The command format is:
