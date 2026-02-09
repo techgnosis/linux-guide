@@ -1,0 +1,15 @@
+explicit installs
+* efibootmgr
+* lsblk
+* niri
+* flatpak (see below)
+* xdg-desktop-portal
+* xdg-document-portal (see below)
+* pipewire
+* wireplumber
+* pipewire-pulse
+
+
+dependencies
+* flatpak installs xdg-dbus-proxy which installs dbus
+* flatpak installs fuse3 so there's no reason not to install xdg-document-portal

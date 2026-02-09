@@ -1,32 +1,4 @@
-all of these are explicit installs
-
-during install -
-* intel-ucode
-* efibootmgr
-* doas
-
-post install -
-* niri
-* flatpak
-* xdg-desktop-portal
-* xdg-document-portal
-* pipewire
-* wireplumber
-* pipewire-pulse
-
-
-dependencies -
-* flatpak installs xdg-dbus-proxy which installs dbus
-* flatpak installs fuse3 so there's no reason not to install xdg-document-portal
-
-
-
-
-
-# INSTALL STEPS
-
 ### Get some network
-
 ip address add 192.168.1.200/24 broadcast + dev eth0
 ip link set dev eth0 up
 ip route add 0.0.0.0/0 via 192.168.1.1
@@ -37,8 +9,6 @@ echo "https://dl-cdn.alpinelinux.org/alpine/v3.23/main" >> /etc/apk/respositorie
 
 
 ### Setup partitions
-
-
 apk add lsblk
 apk add gptfdisk
 gdisk /dev/sdb
@@ -83,13 +53,26 @@ cp /etc/apk/repositories /mnt/etc/apk/
 REPO="https://dl-cdn.alpinelinux.org/alpine/v3.23/main"
 apk add --root /mnt --initdb --repository $REPO alpine-base
 
-### chroot and setup
+### chroot to new alpine host
 chroot /mnt /bin/ash
 
-echo "/dev/sdb1 /boot vfat  defaults" > /etc/fstab
-echo "/dev/sdb2 / ext4  defaults" >> /etc/fstab
+### setup fstab
+echo "/dev/sdb2 /   ext4    defaults    0   1" >> /etc/fstab
+echo "/dev/sdb1 /boot   vfat    defaults    0   2" > /etc/fstab
 
-exit the chroot
+### install the rest of the packages you need for host setup
+apk add intel-ucode linux-lts doas
+
+### setup root password
+passwd
+
+### setup new user
+useradd -m james
+passwd james
+echo "permit persist alice as root" > /etc/doas.conf
+
+### back to temp host
+exit
 
 ### Setup EFI Boot Manager
 apk add efibootmgr
