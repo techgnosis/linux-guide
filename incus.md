@@ -1,11 +1,27 @@
-Incus is the OSS replacement for LXD after Canonical took it over.
+Incus is the OSS replacement for LXD
 
 `incusd` is the daemon
 `incus` is the client
-The runtime is LXC
-
-incus might have a lot of apparmor requirements. disable that stuff.
-
-It should in theory be more user-friendly than machinectl/systemd-nspawn
 
 `pacman -S incus`
+
+You do not need the user-level unit files.
+`sudo systemctl start incus.service`
+
+You MUST do this (I tested making a user container without, it's a must)
+`usermod --add-subuids 1000000-1000999999 --add-subgids 1000000-1000999999 root`
+This gives a big range of IDs that users in containers can map to. It's exactly 10 million. Don't change the numbers
+
+If you do not do that then you MUST run containers with `security.privileged=true` which means the `root` user in the container is the real root user of the host
+
+You need to add your user to the `incus` group to make containers
+`usermod --append --groups incus james`\
+`newgrp incus`
+
+You can add to `incus-admin` but I'd rather just stick to sudo for admin things. More transparent.
+
+Then you can run a container
+`incus launch images:image_name/tag container_name`
+
+Then you can enter the container
+`incus exec container_name -- bash`
