@@ -14,14 +14,15 @@ This gives a big range of IDs that users in containers can map to. It's exactly 
 
 If you do not do that then you MUST run containers with `security.privileged=true` which means the `root` user in the container is the real root user of the host
 
-You need to add your user to the `incus` group to make containers
-`usermod --append --groups incus james`\
-`newgrp incus`
-
-You can add to `incus-admin` but I'd rather just stick to sudo for admin things. More transparent.
+You need to add your user to the `incus-admin` group to make containers
+`usermod --append --groups incus-admin james`\
+`newgrp incus-admin`
 
 Then you can run a container
 `incus launch images:image_name/tag container_name`
 
 Then you can enter the container
 `incus exec container_name -- bash`
+
+To reiterate - 
+If you want to use the system socket and system service, you must use be in incus-admin
