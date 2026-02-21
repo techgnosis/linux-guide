@@ -5,17 +5,20 @@ ip route add 0.0.0.0/0 via 192.168.1.1
 echo "nameserver 192.168.1.1" >> resolv.conf
 
 # Setup repo
-echo "https://dl-cdn.alpinelinux.org/alpine/v3.23/main" >> /etc/apk/respositories
+echo "https://dl-cdn.alpinelinux.org/alpine/v3.23/main" > /etc/apk/respositories
+echo "https://dl-cdn.alpinelinux.org/alpine/v3.23/community" >> /etc/apk/respositories
 
+apk update
 
 # Setup partitions
 apk add lsblk
 apk add gptfdisk
+
+# use gdisk to partition. fdisk is from busybox and it can't make GPT tables
+# EFI System Partition = ef00
+# gdisk seems mostly the same as fdisk so no problems there
 gdisk /dev/sdb
 
-use gdisk to partition. fdisk is from busybox and it can't make GPT tables\
-EFI System Partition = ef00\
-gdisk seems mostly the same as fdisk so no problems there
 
 # Format partitions
 apk add e2fsprogs
@@ -24,7 +27,6 @@ apk add dosfstools
 mkfs.vfat -F32 /dev/sdb1
 
 # Mount partitions
-
 mount /dev/sdb2 /mnt
 mkdir /mnt/boot
 mount /dev/sdb1 /mnt/boot
@@ -40,7 +42,6 @@ mount -t sysfs /sys /mnt/sys
 
 
 # Copy files needed from temp host
-
 mkdir /mnt/etc
 cp /etc/resolv.conf /mnt/etc/
 
