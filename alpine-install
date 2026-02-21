@@ -71,8 +71,14 @@ useradd -m james
 passwd james
 echo "permit persist alice as root" > /etc/doas.conf
 
-### Enable hwdrivers
+### Enable bare minimum services
+
+#### this loads the modules for devices that exist at boot
 rc-update add hwdrivers sysinit
+
+##### this reads /etc/fstab and mounts
+rc-update add localmount sysinit
+
 
 ### back to temp host
 exit
