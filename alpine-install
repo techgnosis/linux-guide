@@ -75,7 +75,7 @@ echo "permit persist alice as root" > /etc/doas.conf
 rc-update add hwdrivers sysinit
 
 # enable service to read and use /etc/fstab
-rc-update add localmount sysinit
+rc-update add localmount boot
 
 
 # back to temp host
