@@ -1,14 +1,14 @@
-### Get some network
+# Get some network
 ip addr add 192.168.1.200/24 broadcast + dev eth0
 ip link set dev eth0 up
 ip route add 0.0.0.0/0 via 192.168.1.1
 echo "nameserver 192.168.1.1" >> resolv.conf
 
-### Setup repo
+# Setup repo
 echo "https://dl-cdn.alpinelinux.org/alpine/v3.23/main" >> /etc/apk/respositories
 
 
-### Setup partitions
+# Setup partitions
 apk add lsblk
 apk add gptfdisk
 gdisk /dev/sdb
@@ -17,13 +17,13 @@ use gdisk to partition. fdisk is from busybox and it can't make GPT tables\
 EFI System Partition = ef00\
 gdisk seems mostly the same as fdisk so no problems there
 
-### Format partitions
+# Format partitions
 apk add e2fsprogs
 mkfs.ext4 /dev/sdb2
 apk add dosfstools
 mkfs.vfat -F32 /dev/sdb1
 
-### Mount partitions
+# Mount partitions
 
 mount /dev/sdb2 /mnt
 mkdir /mnt/boot
@@ -39,7 +39,7 @@ mkdir /mnt/sys
 mount -t sysfs /sys /mnt/sys
 
 
-### Copy files needed from temp host
+# Copy files needed from temp host
 
 mkdir /mnt/etc
 cp /etc/resolv.conf /mnt/etc/
@@ -49,41 +49,38 @@ cp /etc/apk/keys/* /mnt/etc/apk/keys/
 
 cp /etc/apk/repositories /mnt/etc/apk/
 
-### Install alpine-base
+# Install alpine-base
 REPO="https://dl-cdn.alpinelinux.org/alpine/v3.23/main"
 apk add --root /mnt --initdb --repository $REPO alpine-base
 
-### chroot to new alpine host
+# chroot to new alpine host
 chroot /mnt /bin/ash
 
-### setup fstab
+# setup fstab
 echo "/dev/sdb2 / ext4 defaults 0 1" >> /etc/fstab
 echo "/dev/sdb1 /boot vfat defaults 0 2" > /etc/fstab
 
-### install the rest of the packages you need for host setup
+# install the rest of the packages you need for host setup
 apk add intel-ucode linux-lts doas
 
-### setup root password
+# setup root password
 passwd
 
-### setup new user
-useradd -m james
-passwd james
+# setup new user
+adduser james
 echo "permit persist alice as root" > /etc/doas.conf
 
-### Enable bare minimum services
-
-#### this loads the modules for devices that exist at boot
+# enable service to load modules of devices that exist on boot
 rc-update add hwdrivers sysinit
 
-##### this reads /etc/fstab and mounts
+# enable service to read and use /etc/fstab
 rc-update add localmount sysinit
 
 
-### back to temp host
+# back to temp host
 exit
 
-### Setup EFI Boot Manager
+# Setup EFI Boot Manager
 apk add efibootmgr
 
 efibootmgr \
