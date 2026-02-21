@@ -71,6 +71,9 @@ useradd -m james
 passwd james
 echo "permit persist alice as root" > /etc/doas.conf
 
+### Enable hwdrivers
+rc-update add hwdrivers sysinit
+
 ### back to temp host
 exit
 
